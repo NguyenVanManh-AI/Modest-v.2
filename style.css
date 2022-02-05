@@ -1,0 +1,693 @@
+ *
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+li {
+	list-style: none;
+}
+
+/*header*/
+@font-face{
+	font-family: OpenSans-Semibold;
+	src:url(open-sans-semibold/OpenSans-Semibold.ttf);
+}
+/*font thì cx như icon có hai loại một là dùng link hay là nhúng ntn 
+đặt tên font_face xong từ đó dùng nhiều lần url là đường dẫn phải chính xác , còn font-family ở trong font-face là 
+mình tự đặt tên cho font đó , đặt gì cx đc , đặt tên gì thì sau này dùng tên đó */
+
+
+body{
+	margin-right: 0px;
+}
+#header{
+	width: 100% ;
+	height: 83px;
+	background-color: #1d2126;
+	padding: 0px 380px;
+	display: flex;
+}
+header #logo {
+	width: 488px ;
+	height: 100%;
+	align-items: center;
+	line-height: 100%;
+	display: flex;
+}
+header #menu {
+	width: 682px;
+	height: 100%;
+} 
+
+#menu > ul {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#menu > ul a {
+	color: #a4aead;
+	font-family: OpenSans-Semibold,sans-serif;
+}
+#menu > ul > li {
+	height: 32px;
+	align-items: center;
+	padding: 12px;
+	display:  flex;
+	font-size: 14px;
+	border: 2px solid #1d2126;
+	border-radius: 10px;
+}
+#menu > ul > li:hover{
+	border: 2px solid #23b7a4;
+	border-radius: 10px;
+}
+#menu > ul > li:hover a{
+	color: #23b7a4;
+}
+
+/*banner*/
+/*#banner {
+	width: 100%;
+	height: 660px;
+	background-image: url(img/background.png);
+	background-color: #3a454d;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}*/
+	/*ta thấy trong file psd bức này có màu nền #3a454d nữa , nếu như không có màu nền thì trông sẽ rất là sáng 
+	vấn đề ở đây là nếu như ta lưu ảnh jpg theo đặt tính của nó là không trong suốt như vậy khi ta áp dụng background-color: #3a454d; sẽ không được 
+	vì chỉ có một ảnh jpg đó thôi , nên bắt buộc ta phải lưu dưới dạng png vì đặt tính của png là trong suốt , vì vậy mà ảnh và màu nền chồng 
+	lên nhau như trong file psd vậy , còn nếu jpg thì ảnh che luôn màu nền , đó chính là sự khác biệt của png và jpg */
+	/*ở đoạn myCarouselcarousel-inner đến ol đến li , mình phải set chiều dài và chiều rộng ngay trên thẻ luôn mới được 
+	hay nói cách khác là set ngay trên file html */
+.carousel-inner div {
+	width: 100%;
+	height: 660px;
+	background-color: #3a454d;
+}
+#myCarousel {
+	position: relative;
+}
+#myCarousel ol li {
+	width: 10px;
+	height: 10px;
+	border : none;
+	border-radius: 10px;
+	margin: 2px 2px;
+}
+#myCarousel ol {
+	height: 20px;
+	width: 50px;
+	position: absolute;
+	bottom: 29px;
+	left: 1400px;
+}
+ 
+/*nếu không để display none thì sẽ có mũi tên , ẩn mũi tên đi rồi thì bấm vùng phía bên trái bên phải vẫn còn được , mũi tên chỉ làm kí tự thôi*/
+#myCarousel a span {
+	display: none;
+}
+#welcome-text{
+	width: 654px;
+	height: 188px;
+	position: absolute;
+	top: 224px;
+	left: 374px;
+	/*border: 1px solid red;*/
+}
+/*lên gg search , thì vẫn như cách cũ , hoặc là tải xuống như ở phía treen vậy 
+hoặc là vào google font copy link này bỏ vào phần head trong file index.html 
+<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+font-family sẽ là : Quattrocento Sans; bỏ dấu + ở giữa đi .
+khi mà search trên gg ở dưới họ cũng hướng dẫn mình là font-family trong style.css sẽ như thế nào luôn 
+*/
+#welcome-text h1 {
+	font-family: Quattrocento Sans,sans-serif;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 42px;
+	color: #ffffff;
+	letter-spacing: 0px;
+}
+#welcome-text p {
+	font-family: Open Sans,sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	color: #ccd0d7;
+	letter-spacing: 0px;
+	margin-top: 20px;
+}
+#welcome-text button {
+	width: 120px;
+	height: 40px;
+	border-radius: 10px;
+	border: 1px solid white;
+	background-color: transparent;
+	margin-top: 16px;
+	margin-right: 3px;
+	/*align-content: center;*/
+}
+/*font-family: Quattrocento Sans; là được 
+còn 
+font-family : Quattrocento Sans; là không được */
+#welcome-text button:hover {
+	border: 1px solid #23b7a4;
+	background-color: #23b7a4;
+}
+#welcome-text button a{
+	color: #ffffff;
+	font-family: Quattrocento Sans,sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 28px;
+}
+
+/*About*/
+#about {
+	width: 100%;
+	height: 611px;
+	/*border: 1px solid red;*/
+	padding-top: 81px;
+	padding-left: 379px;
+}
+.section-title {
+	width: 310px;
+	height: 38px;
+	border: 0px solid ;
+	border-left-width:10px; 
+	border-color: #e1e6ea;
+	font-size: 36px;
+	line-height: 42px;
+	letter-spacing: 0px;
+	font-family: Quattrocento Sans,sans-serif;
+	font-weight: bold;
+	color: #292f36;
+	padding-left: 12px;
+	margin-bottom: 50px;
+}
+#container {
+	display: flex;
+}
+#our-mission {
+	margin-right: 30px;
+}
+#our-mission ul {
+	display: flex;
+	height: 70px;
+	align-items: center;
+}
+/*đã là display : flex thì không được có thêm thuộc tính width*/
+#our-mission li {
+	width: 60px;
+	height: 60px;
+	background-color: #c8cdd0;
+	align-items: center;
+	line-height: 60px;
+	text-align: center;
+	margin-right: 1px;
+}
+#our-mission li:hover{
+	width: 70px;
+	height: 70px;
+}
+
+#our-mission li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#our-mission p {
+	font-family: Open Sans,sans-serif;
+	font-size:16px;
+	line-height: 26px;
+	letter-spacing: 0px;
+	color: #8d8f92;
+	width: 654px;
+	height: 132px;
+}
+#our-mission span {
+	font-family: Open Sans,sans-serif;
+	font-weight:bold;
+}
+
+#our-goals ul {
+	width: 457px;
+	height: 342px;
+	flex-direction: column;
+	justify-content: space-between;
+	display: flex;
+	/*border: 1px solid red;*/
+}
+/*#our-goals ul  li {*/
+	/*border: 1px solid red;*/
+/*}*/
+#our-goals ul  li span {
+	font-family: Quattrocento Sans,sans-serif;
+	font-size: 20px;
+	line-height: 50px;
+	letter-spacing: 0px;
+	color: #ffffff;
+	width: 50px;
+	height: 50px;
+	align-items: center;
+	background-color: #23b7a4;
+	display: block;
+	text-align: center;
+	float: left;
+	margin-right: 16px;
+}
+#our-goals ul  li h3 {
+	font-family: Quattrocento Sans,sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 42px;
+	letter-spacing: 0px;
+	color: #292f36;
+	margin-top: -14px;
+}
+#our-goals ul  li p{
+	font-family: Open Sans,sans-serif;
+	font-size: 16px;
+	line-height: 26px;	
+	letter-spacing: 0px;
+	color: #8d8f92;
+	margin-top: -15px;
+	margin-left: 67px;
+}
+
+/*Our Team*/
+#our-team {
+	width: 100%;
+	height: 652px;
+	padding-top: 81px;
+	padding-left: 379px;
+	padding-right: 379px;
+}
+
+#our-team ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+#our-team ul li {
+	width: 263px;
+	height: 376px;
+	position: relative;
+}
+
+#our-team ul li div {
+	width: 100%;
+	height: 76px;
+	margin-top: 0px;
+	padding-left: 20px;
+	padding-top: 10px;
+	background-color: #e1e6ea;
+}
+#our-team ul li div h4 {
+	font-family: Quattrocento Sans,sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 35px;
+	letter-spacing: 0px;
+	color: #292f36;
+}
+#our-team ul li div h5 {
+	font-family: Open Sans,sans-serif;
+	font-size: 14px;
+	line-height: 26px;
+	margin-top: -20px;
+	letter-spacing: 0px;
+	color: #8d8f92;
+}
+
+#our-team ul li:hover div{
+	background-color: #3a454d;
+}
+#our-team ul li:hover h4,#our-team ul li:hover h5{
+	color: white;
+}
+
+#our-team ul .member {
+	width: 154px;
+	height: 56px;
+	position: absolute;
+	top: 126px;
+	left: 60px;
+	display: none;
+	justify-content: space-between;
+	line-height: 56px;   /*(1)*/
+	align-items: center; /*(1)*/
+}
+#our-team ul .member li {
+	width: 50px;
+	height: 50px;
+	background-color: #3a454d;
+	line-height: 50px;
+	align-items: center;
+	text-align: center;
+}
+#our-team ul > li:hover .member {
+	display: flex;
+}
+#our-team ul li .member li:hover {  /*(1)*/
+	width: 56px;
+	height: 56px;
+	background-color: #23b7a4;
+}
+#our-team ul p {
+	width: 100%;
+	height: 300px;
+	background-color: white;
+	opacity: 40%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+#our-team ul li:hover p{
+	display: block;
+}
+ /*(1)*//* là style thêm , có thể bỏ đi nếu muốn*/
+
+/*Work*/
+
+#work {
+	width: 100%;
+	height: 900px;
+	background-color: #3a454d;
+	padding-top: 81px;
+	padding-left: 379px;
+	padding-right: 379px;
+}
+
+#work h1 {
+	color: white;
+	border-color: #4e5a62;
+}
+
+#work ul {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#work ul li{
+	width: 360px;
+	height: 265px;
+	/*border:1px solid red;*/
+	position: relative;
+	margin-bottom: 30px;
+}
+
+#work span i {
+	color: white;
+	font-size: 30px;
+}
+
+#work span {
+	position: absolute;
+	left: 174px;
+	top: 92px;
+}
+#work ul li .work-opacity{
+	width: 100%;
+	height: 209px;
+	background-color: #292f36;
+	opacity: 50%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+#work ul li .work-opacity a{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+#work ul li .work-text {
+	width: 100%;
+	height: 58px;
+	position: absolute;
+	left: 0px;
+	bottom: -18px;
+	/*border: 1px solid red;*/
+	background-color: #292f36;
+	font-family: Quattrocento Sans,sans-serif;
+	font-size: 18px;
+	line-height: 58px;
+	letter-spacing: 0px;
+	padding-left: 21px;
+	color: white;
+	align-items: center;
+	display: none;
+}
+#work ul li:hover .work-opacity{
+	display: block;
+}
+
+#work ul li:hover .work-text{
+	display: block;
+}
+
+#work button {
+	width: 147px;
+	height: 40px;
+	border-radius: 6px;
+	border:2px solid white;
+	margin-top: 30px;
+	margin-left: 498px;
+	outline: none;
+	background-color: transparent;
+	font-family: Quattrocento Sans,sans-serif;
+	font-size: 14px;
+	line-height: 40px;
+	letter-spacing: 0px;
+	color: white;
+}
+#work button:hover {
+	background-color: #23b7a4;
+}
+
+.hidden {
+	display: none;
+}
+/*#work button a:active + #workActive {
+	display: block;
+}*/
+
+
+/*Services*/ 
+#services {
+	width: 100%;
+	height: 898px;
+	padding-top: 81px;
+	padding-left: 379px;
+	padding-right: 379px;
+}
+
+#services ul {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#services ul li {
+	width: 263px;
+	height: 291px;
+	padding: 36px 0px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+#services ul li h4 {
+	font-family: Quattrocento Sans,sans-serif;
+	font-size: 17px;
+	line-height: auto;
+	letter-spacing: 0px;
+	color: #292f36;
+	height: 44px;
+	margin-top: 32px;
+}
+#services ul li p {
+	font-family: Open Sans,sans-serif;
+	color: #8d8f92;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 0px;
+	height: 131px;
+}
+
+
+/*Features*/
+#features {
+	width: 100%;
+	height: 731px;
+	padding-top: 81px;
+	padding-left: 379px;
+	padding-right: 379px;
+	background-color: #3a454d;
+}
+
+#features h1 {
+	border-color: #4e5a62;
+	color: white;
+}
+
+#features ul {
+	display: flex; 
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	height: 477px;
+}
+
+#features ul li {
+	width: 360px;
+	height: 100%;
+}
+
+#features ul li h4 {
+	
+	font-size: 18px;
+	line-height: 42px;
+	letter-spacing: 0px;
+	color: white;
+	margin-top: 52px;
+	height: 44px;
+}
+
+#features ul li p {
+	font-family: Open Sans,sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	color: #dcdfe1;
+	height: 143px;
+}
+
+/*Contact*/
+#contact {
+	width: 100%;
+	height: 930px;
+	padding-top: 81px;
+	padding-left: 379px;
+	padding-right: 379px;
+	background-image: url(img/pic13.jpg);
+	background-position: 0px 180px,0px 364px;
+	background-repeat: no-repeat;
+}
+#incontact{
+	width: 1155px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 276px;
+}
+#incontact div{
+	width: 555px;
+	height: 402px;
+}
+#incontact div h4{
+	font-family: Quattrocento Sans,sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 26px;
+	letter-spacing: 0px;
+	color: #292f36;
+	margin-top: 178px;
+	margin-left: 2px;
+}
+#incontact div p {
+	font-family: Open Sans,sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	letter-spacing: 0px;
+	color: #8d8f92;
+}
+#incontact div p:nth-child(2){
+	height: 96px;
+	margin-top: 30px;
+}
+#incontact div p span {
+	font-weight: bold;
+}
+#incontact div:nth-child(2) {
+	background-color: white;
+}
+
+#incontact form {
+	padding-left: 30px;
+	padding-top: 30px;
+}
+#incontact form input {
+	background-color: #eaeef1;
+	display: inline-block;
+	width: 240px;
+	height: 44px;
+	border-radius: 6px;
+	border: none;
+	margin-bottom: 36px;
+}
+
+#incontact form button {
+	outline: none;
+	font-family: Quattrocento Sans,sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 28px;
+	letter-spacing: 0px;
+	color: white;
+	background-color: #23b7a4;
+	border-radius: 6px;
+	width: 147px;
+	height: 40px;
+	outline: none;
+	border:none;
+	margin-top: 20px;
+}
+
+#incontact form label {
+	font-family: Quattrocento Sans,sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 26px;
+	letter-spacing: 0px;
+	color: #8d8f92;
+	margin-bottom: 2px;
+}
+#incontact form label:nth-child(1){
+	margin-right: 180px;
+}
+#yname {
+	margin-right: 16px;
+}
+
+#ymessage {
+	width: 495px;
+	height: 159px;
+	border-radius: 6px;
+	border: none;
+	background-color: #eaeef1
+}
+
+
+/*Footer*/
+footer {
+	width: 100%;
+	height: 95px;
+	background-color: #3a454d;
+	line-height: 95px;
+	align-items: center;
+	padding-left: 379px;
+}
+footer h5 {
+	font-family: Open Sans,sans-serif;
+	font-size: 14px;
+	line-height: 26px;
+	color: white;
+	letter-spacing: 0px;
+	display: inline-block;
+	margin-right: 620px;
+}
