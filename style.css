@@ -14,9 +14,6 @@ li {
 	font-family: OpenSans-Semibold;
 	src:url(open-sans-semibold/OpenSans-Semibold.ttf);
 }
-/*font thì cx như icon có hai loại một là dùng link hay là nhúng ntn 
-đặt tên font_face xong từ đó dùng nhiều lần url là đường dẫn phải chính xác , còn font-family ở trong font-face là 
-mình tự đặt tên cho font đó , đặt gì cx đc , đặt tên gì thì sau này dùng tên đó */
 
 
 body{
@@ -68,21 +65,6 @@ header #menu {
 	color: #23b7a4;
 }
 
-/*banner*/
-/*#banner {
-	width: 100%;
-	height: 660px;
-	background-image: url(img/background.png);
-	background-color: #3a454d;
-	background-size: 100%;
-	background-repeat: no-repeat;
-}*/
-	/*ta thấy trong file psd bức này có màu nền #3a454d nữa , nếu như không có màu nền thì trông sẽ rất là sáng 
-	vấn đề ở đây là nếu như ta lưu ảnh jpg theo đặt tính của nó là không trong suốt như vậy khi ta áp dụng background-color: #3a454d; sẽ không được 
-	vì chỉ có một ảnh jpg đó thôi , nên bắt buộc ta phải lưu dưới dạng png vì đặt tính của png là trong suốt , vì vậy mà ảnh và màu nền chồng 
-	lên nhau như trong file psd vậy , còn nếu jpg thì ảnh che luôn màu nền , đó chính là sự khác biệt của png và jpg */
-	/*ở đoạn myCarouselcarousel-inner đến ol đến li , mình phải set chiều dài và chiều rộng ngay trên thẻ luôn mới được 
-	hay nói cách khác là set ngay trên file html */
 .carousel-inner div {
 	width: 100%;
 	height: 660px;
@@ -106,7 +88,6 @@ header #menu {
 	left: 1400px;
 }
  
-/*nếu không để display none thì sẽ có mũi tên , ẩn mũi tên đi rồi thì bấm vùng phía bên trái bên phải vẫn còn được , mũi tên chỉ làm kí tự thôi*/
 #myCarousel a span {
 	display: none;
 }
@@ -118,12 +99,6 @@ header #menu {
 	left: 374px;
 	/*border: 1px solid red;*/
 }
-/*lên gg search , thì vẫn như cách cũ , hoặc là tải xuống như ở phía treen vậy 
-hoặc là vào google font copy link này bỏ vào phần head trong file index.html 
-<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-font-family sẽ là : Quattrocento Sans; bỏ dấu + ở giữa đi .
-khi mà search trên gg ở dưới họ cũng hướng dẫn mình là font-family trong style.css sẽ như thế nào luôn 
-*/
 #welcome-text h1 {
 	font-family: Quattrocento Sans,sans-serif;
 	font-weight: bold;
@@ -150,9 +125,6 @@ khi mà search trên gg ở dưới họ cũng hướng dẫn mình là font-fam
 	margin-right: 3px;
 	/*align-content: center;*/
 }
-/*font-family: Quattrocento Sans; là được 
-còn 
-font-family : Quattrocento Sans; là không được */
 #welcome-text button:hover {
 	border: 1px solid #23b7a4;
 	background-color: #23b7a4;
@@ -169,7 +141,6 @@ font-family : Quattrocento Sans; là không được */
 #about {
 	width: 100%;
 	height: 611px;
-	/*border: 1px solid red;*/
 	padding-top: 81px;
 	padding-left: 379px;
 }
@@ -199,7 +170,6 @@ font-family : Quattrocento Sans; là không được */
 	height: 70px;
 	align-items: center;
 }
-/*đã là display : flex thì không được có thêm thuộc tính width*/
 #our-mission li {
 	width: 60px;
 	height: 60px;
@@ -242,9 +212,6 @@ font-family : Quattrocento Sans; là không được */
 	display: flex;
 	/*border: 1px solid red;*/
 }
-/*#our-goals ul  li {*/
-	/*border: 1px solid red;*/
-/*}*/
 #our-goals ul  li span {
 	font-family: Quattrocento Sans,sans-serif;
 	font-size: 20px;
@@ -372,7 +339,6 @@ font-family : Quattrocento Sans; là không được */
 #our-team ul li:hover p{
 	display: block;
 }
- /*(1)*//* là style thêm , có thể bỏ đi nếu muốn*/
 
 /*Work*/
 
@@ -476,9 +442,6 @@ font-family : Quattrocento Sans; là không được */
 .hidden {
 	display: none;
 }
-/*#work button a:active + #workActive {
-	display: block;
-}*/
 
 
 /*Services*/ 

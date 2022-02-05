@@ -1,37 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!--t  -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<!--t  -->
 
 	<title>Modest</title>
 	<link rel="SHORTCUT ICON" type="text/css" href="img/logo.png">
-	<!-- chú ý phải có đầy đỉ thẻ meta , thẻ link bootstrap , 3 thẻ script của js như hướng dẫn thì mới được -->
     <meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="preconnect" href="https://fonts.googleapis.com"><!-- thấy google ghi thêm hai link này nên cũng copy vào luôn  -->
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- thấy google ghi thêm hai link này nên cũng copy vào luôn  -->
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Quattrocento+Sans&display=swap" rel="stylesheet">
-	<!-- /*lên gg search , thì vẫn như cách cũ , hoặc là tải xuống như ở phía treen vậy 
-		hoặc là vào google font copy link này bỏ vào phần head trong file index.html 
-		<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-		font-family sẽ là : Quattrocento Sans; bỏ dấu + ở giữa đi .
-		khi mà search trên gg ở dưới họ cũng hướng dẫn mình là font-family trong style.css sẽ như thế nào luôn 
-
-		thay vì 
-		<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
-		và 
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-		thì ta gộp lại 
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Quattrocento+Sans&display=swap" rel="stylesheet">
-		khi mà vào google bấm vào dấu + => thì những font mà ta đã chọn trên đó => google sẽ tự động gộp lại cho mình 
-	*/ -->
+	 
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
 		a:link, a:active, a:visited{
@@ -386,8 +369,8 @@
 	var work = document.getElementById('work');
 
 	showMeMore.onclick = function(){
-		if (workActive.classList.contains('hidden')==true) { // kiểm tra hidden có phải là class của thẻ đó chưa 
-			workActive.classList.remove('hidden'); // nếu đã là class của thẻ đó thì xóa class hidden đi 
+		if (workActive.classList.contains('hidden')==true) { 
+			workActive.classList.remove('hidden');  
 			work.style = 'height:1600px';
 			showMeMore.innerHTML = 'HIDDEN';
 			ScrollReveal().reveal('#work li', { delay: 500, origin: 'left', interval: 200 ,distance: '300px' });  
@@ -398,18 +381,15 @@
 			work.style = 'height:900px';
 			showMeMore.innerHTML = 'SHOW ME MORE';
 		}
-		// ý tưởng là đoạn .remove và .add có thể thay bằng : classList.toggle()  
-		// workActive.classList.toggle('hidden'); // vẫn hoạt động tốt , còn style thì style cho các thẻ đó thôi 
-		// ( nhớ đưa nút button SHOW ME MORE lên đầu )
     }
 
 
 
     // Make Website With Scroll Reveal Effects
     ScrollReveal({
-	  distance: '60px',  // khoảng cách , dời element xuống 60px so với vị trí hiện tại 
-	  duration: 2500,    // thời lượng , mất 2.5s để di chạy hết 60px
-	  delay: 400         // trì hoãn , trì hoãn 0.4s rồi mời di chuyển (delay xong rồi mới duration)
+	  distance: '60px',   
+	  duration: 2500,     
+	  delay: 400          
 	});
 
 	ScrollReveal().reveal('#banner,#about,#out-team,#work,#services,#features,#contact', { delay: 600, origin: 'bottom' });       
